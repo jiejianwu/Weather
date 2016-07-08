@@ -6,13 +6,11 @@
 //  Copyright © 2016年 吴杰健. All rights reserved.
 //
 
-import Foundation
-
 
 class WebClient: AFHTTPSessionManager {
 
-    static let baseUrl = ""
-    static var _shareInstance: WebClient?
+    static let baseUrl = "http://http://api.yytianqi.com/"
+    static private var _shareInstance: WebClient?
     
     class func shareInstance() -> WebClient {
         if _shareInstance == nil {
