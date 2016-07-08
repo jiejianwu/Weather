@@ -58,14 +58,8 @@
 		E9EFD0241D2F7B66006047E2 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
-				E9EFD0281D2F7B66006047E2 /* AppDelegate.h */,
-				E9EFD0291D2F7B66006047E2 /* AppDelegate.m */,
-				E9EFD02B1D2F7B66006047E2 /* ViewController.h */,
-				E9EFD02C1D2F7B66006047E2 /* ViewController.m */,
-				E9EFD02E1D2F7B66006047E2 /* Main.storyboard */,
-				E9EFD0311D2F7B66006047E2 /* Assets.xcassets */,
-				E9EFD0331D2F7B66006047E2 /* LaunchScreen.storyboard */,
-				E9EFD0361D2F7B66006047E2 /* Info.plist */,
+				E9EFD03D1D2F7D79006047E2 /* Storyboard */,
+				E9EFD03E1D2F7D9D006047E2 /* ViewController */,
 				E9EFD0251D2F7B66006047E2 /* Supporting Files */,
 			);
 			path = Weather;
@@ -74,9 +68,31 @@
 		E9EFD0251D2F7B66006047E2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E9EFD0281D2F7B66006047E2 /* AppDelegate.h */,
+				E9EFD0291D2F7B66006047E2 /* AppDelegate.m */,
+				E9EFD0311D2F7B66006047E2 /* Assets.xcassets */,
+				E9EFD0361D2F7B66006047E2 /* Info.plist */,
 				E9EFD0261D2F7B66006047E2 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E9EFD03D1D2F7D79006047E2 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				E9EFD02E1D2F7B66006047E2 /* Main.storyboard */,
+				E9EFD0331D2F7B66006047E2 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		E9EFD03E1D2F7D9D006047E2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E9EFD02B1D2F7B66006047E2 /* ViewController.h */,
+				E9EFD02C1D2F7B66006047E2 /* ViewController.m */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +318,7 @@
 				E9EFD03B1D2F7B66006047E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
