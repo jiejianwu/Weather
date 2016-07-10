@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 #import "CityInfo.h"
 
-@interface CitySelectionViewController : UIViewController
+@interface CitySelectionViewController : BaseViewController
 
-@property (nonatomic) void (^citySelectHandler)(CityInfo *city);
+@property (nonatomic, strong) void (^citySelectHandler)(CityInfo *city);
 
 @end

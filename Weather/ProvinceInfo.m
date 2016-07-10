@@ -17,9 +17,17 @@
         self.code = dic[@"city_id"];
         NSMutableArray *tmp = [[NSMutableArray alloc] init];
         NSArray *cityArr = dic[@"list"];
-        for (NSDictionary *cityDic in cityArr) {
-            CityInfo *city = [[CityInfo alloc] initWithDic:cityDic];
-            [tmp addObject:city];
+        for (NSDictionary *cityLevelDic in cityArr) {
+            NSArray *cityLevelArr = cityLevelDic[@"list"];
+            if (cityLevelArr) {
+                for (NSDictionary *cityDic in cityLevelArr) {
+                    CityInfo *city = [[CityInfo alloc] initWithDic:cityDic];
+                    [tmp addObject:city];
+                }
+            } else {
+                CityInfo *city = [[CityInfo alloc] initWithDic:cityLevelDic];
+                [tmp addObject:city];
+            }
         }
         self.citys = [tmp copy];
     }

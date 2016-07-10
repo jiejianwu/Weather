@@ -16,14 +16,41 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="城市" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yu2-3r-Max">
+                                <rect key="frame" x="132" y="104" width="56" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="更新时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jzd-lt-vYq">
+                                <rect key="frame" x="256" y="163.5" width="52" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.4941176471" green="0.50196078430000002" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lft-7R-dKp">
+                                <rect key="frame" x="0.0" y="187" width="320" height="380.5"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Jzd-lt-vYq" secondAttribute="trailing" constant="12" id="7fv-2h-JGf"/>
+                            <constraint firstAttribute="trailing" secondItem="Lft-7R-dKp" secondAttribute="trailing" id="8oM-Q7-0UN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Lft-7R-dKp" secondAttribute="bottom" id="J09-Sh-hdi"/>
+                            <constraint firstItem="Lft-7R-dKp" firstAttribute="top" secondItem="Jzd-lt-vYq" secondAttribute="bottom" constant="8" id="cMY-rC-0xG"/>
+                            <constraint firstItem="Yu2-3r-Max" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d82-ZK-blI"/>
+                            <constraint firstItem="Lft-7R-dKp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="d8T-9E-JmP"/>
+                            <constraint firstItem="Lft-7R-dKp" firstAttribute="top" secondItem="Yu2-3r-Max" secondAttribute="bottom" constant="50" id="feO-yg-9lw"/>
+                            <constraint firstItem="Yu2-3r-Max" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="ty7-d0-Bef"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="城市" id="ttG-X3-6ET">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Rn1-VD-q31">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="y4Y-km-hN3">
                                 <rect key="frame" x="233" y="7" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="城市"/>
+                                <state key="normal" title="城市列表"/>
                                 <connections>
                                     <action selector="cityButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RXJ-AM-RpR"/>
                                 </connections>
@@ -31,6 +58,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="labelCity" destination="Yu2-3r-Max" id="bm1-kE-Pfn"/>
+                        <outlet property="labelUpdateTime" destination="Jzd-lt-vYq" id="3Ul-dp-5Tl"/>
+                        <outlet property="scrollViewDaysWeather" destination="Lft-7R-dKp" id="3NB-ul-AHr"/>
                         <segue destination="cNO-cA-VZm" kind="modal" identifier="segue_modal_from_main_to_city_list" id="t6z-fj-GeD"/>
                     </connections>
                 </viewController>

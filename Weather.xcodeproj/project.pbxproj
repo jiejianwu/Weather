@@ -13,6 +13,13 @@
 		E94984C01D2FE86B00005E86 /* GlobalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94984BF1D2FE86B00005E86 /* GlobalDataManager.swift */; };
 		E94984C31D2FF09B00005E86 /* CityInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E94984C21D2FF09B00005E86 /* CityInfo.m */; };
 		E94984C81D2FF2B600005E86 /* ProvinceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E94984C71D2FF2B600005E86 /* ProvinceInfo.m */; };
+		E94984CB1D31E07A00005E86 /* WAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = E94984CA1D31E07A00005E86 /* WAlertController.m */; };
+		E94984CE1D31E72700005E86 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E94984CD1D31E72700005E86 /* BaseViewController.m */; };
+		E94984D11D31FC6E00005E86 /* WeatherInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E94984D01D31FC6E00005E86 /* WeatherInfo.m */; };
+		E94984D51D3202DF00005E86 /* WeatherView.m in Sources */ = {isa = PBXBuildFile; fileRef = E94984D41D3202DF00005E86 /* WeatherView.m */; };
+		E94984D71D3202FC00005E86 /* WeatherView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E94984D61D3202FC00005E86 /* WeatherView.xib */; };
+		E94984DA1D322B7100005E86 /* CityWeatherInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E94984D91D322B7100005E86 /* CityWeatherInfo.m */; };
+		E94984DC1D32436200005E86 /* WeatherCode.plist in Resources */ = {isa = PBXBuildFile; fileRef = E94984DB1D32436200005E86 /* WeatherCode.plist */; };
 		E9EFD0271D2F7B66006047E2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD0261D2F7B66006047E2 /* main.m */; };
 		E9EFD02A1D2F7B66006047E2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD0291D2F7B66006047E2 /* AppDelegate.m */; };
 		E9EFD02D1D2F7B66006047E2 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD02C1D2F7B66006047E2 /* MainViewController.m */; };
@@ -34,6 +41,18 @@
 		E94984C21D2FF09B00005E86 /* CityInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityInfo.m; sourceTree = "<group>"; };
 		E94984C61D2FF2B600005E86 /* ProvinceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProvinceInfo.h; sourceTree = "<group>"; };
 		E94984C71D2FF2B600005E86 /* ProvinceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProvinceInfo.m; sourceTree = "<group>"; };
+		E94984C91D31E07A00005E86 /* WAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAlertController.h; sourceTree = "<group>"; };
+		E94984CA1D31E07A00005E86 /* WAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAlertController.m; sourceTree = "<group>"; };
+		E94984CC1D31E72700005E86 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		E94984CD1D31E72700005E86 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		E94984CF1D31FC6E00005E86 /* WeatherInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherInfo.h; sourceTree = "<group>"; };
+		E94984D01D31FC6E00005E86 /* WeatherInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherInfo.m; sourceTree = "<group>"; };
+		E94984D31D3202DF00005E86 /* WeatherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherView.h; sourceTree = "<group>"; };
+		E94984D41D3202DF00005E86 /* WeatherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherView.m; sourceTree = "<group>"; };
+		E94984D61D3202FC00005E86 /* WeatherView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeatherView.xib; sourceTree = "<group>"; };
+		E94984D81D322B7100005E86 /* CityWeatherInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityWeatherInfo.h; sourceTree = "<group>"; };
+		E94984D91D322B7100005E86 /* CityWeatherInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityWeatherInfo.m; sourceTree = "<group>"; };
+		E94984DB1D32436200005E86 /* WeatherCode.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WeatherCode.plist; sourceTree = "<group>"; };
 		E9EFD0221D2F7B66006047E2 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9EFD0261D2F7B66006047E2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E9EFD0281D2F7B66006047E2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -80,6 +99,10 @@
 			children = (
 				E94984B61D2F927400005E86 /* WebClient.swift */,
 				E94984BF1D2FE86B00005E86 /* GlobalDataManager.swift */,
+				E94984C91D31E07A00005E86 /* WAlertController.h */,
+				E94984CA1D31E07A00005E86 /* WAlertController.m */,
+				E94984CC1D31E72700005E86 /* BaseViewController.h */,
+				E94984CD1D31E72700005E86 /* BaseViewController.m */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -91,8 +114,22 @@
 				E94984C21D2FF09B00005E86 /* CityInfo.m */,
 				E94984C61D2FF2B600005E86 /* ProvinceInfo.h */,
 				E94984C71D2FF2B600005E86 /* ProvinceInfo.m */,
+				E94984CF1D31FC6E00005E86 /* WeatherInfo.h */,
+				E94984D01D31FC6E00005E86 /* WeatherInfo.m */,
+				E94984D81D322B7100005E86 /* CityWeatherInfo.h */,
+				E94984D91D322B7100005E86 /* CityWeatherInfo.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		E94984D21D32029F00005E86 /* Subview */ = {
+			isa = PBXGroup;
+			children = (
+				E94984D31D3202DF00005E86 /* WeatherView.h */,
+				E94984D41D3202DF00005E86 /* WeatherView.m */,
+				E94984D61D3202FC00005E86 /* WeatherView.xib */,
+			);
+			name = Subview;
 			sourceTree = "<group>";
 		};
 		E9EFD0191D2F7B66006047E2 = {
@@ -118,6 +155,7 @@
 			children = (
 				E94984B11D2F80F900005E86 /* Base */,
 				E9EFD03D1D2F7D79006047E2 /* Storyboard */,
+				E94984D21D32029F00005E86 /* Subview */,
 				E94984BB1D2FE2E500005E86 /* Model */,
 				E9EFD03E1D2F7D9D006047E2 /* ViewController */,
 				E9EFD0251D2F7B66006047E2 /* Supporting Files */,
@@ -134,6 +172,7 @@
 				E9EFD0311D2F7B66006047E2 /* Assets.xcassets */,
 				E9EFD0361D2F7B66006047E2 /* Info.plist */,
 				E9EFD0261D2F7B66006047E2 /* main.m */,
+				E94984DB1D32436200005E86 /* WeatherCode.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -221,6 +260,8 @@
 				E9EFD0351D2F7B66006047E2 /* LaunchScreen.storyboard in Resources */,
 				E9EFD0321D2F7B66006047E2 /* Assets.xcassets in Resources */,
 				E9EFD0301D2F7B66006047E2 /* Main.storyboard in Resources */,
+				E94984DC1D32436200005E86 /* WeatherCode.plist in Resources */,
+				E94984D71D3202FC00005E86 /* WeatherView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,10 +320,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E94984D11D31FC6E00005E86 /* WeatherInfo.m in Sources */,
 				E94984C01D2FE86B00005E86 /* GlobalDataManager.swift in Sources */,
+				E94984CE1D31E72700005E86 /* BaseViewController.m in Sources */,
 				E9EFD02D1D2F7B66006047E2 /* MainViewController.m in Sources */,
 				E94984BA1D2FD55200005E86 /* CitySelectionViewController.m in Sources */,
+				E94984DA1D322B7100005E86 /* CityWeatherInfo.m in Sources */,
 				E94984C81D2FF2B600005E86 /* ProvinceInfo.m in Sources */,
+				E94984CB1D31E07A00005E86 /* WAlertController.m in Sources */,
+				E94984D51D3202DF00005E86 /* WeatherView.m in Sources */,
 				E9EFD02A1D2F7B66006047E2 /* AppDelegate.m in Sources */,
 				E9EFD0271D2F7B66006047E2 /* main.m in Sources */,
 				E94984B71D2F927400005E86 /* WebClient.swift in Sources */,

@@ -8,7 +8,7 @@
 
 #import "CitySelectionViewController.h"
 #import "ProvinceInfo.h"
-#import "Weather-Swift.h"
+#import "WAlertController.h"
 
 static NSString * const URL_GET_CITY_WEATHER_INFO = @"citylist/id/1/";
 
@@ -34,7 +34,9 @@ static NSString * const URL_GET_CITY_WEATHER_INFO = @"citylist/id/1/";
 }
 
 - (void)getCityList {
-    [WebClient get:URL_GET_CITY_WEATHER_INFO parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id _Nullable json) {
+    [WebClient get:URL_GET_CITY_WEATHER_INFO
+        parameters:nil
+           success:^(NSURLSessionDataTask * _Nonnull task, id _Nullable json) {
         if (json) {
             NSMutableArray *tmp = [[NSMutableArray alloc] init];
             NSArray *provinceDics = json[@"list"];
@@ -45,9 +47,9 @@ static NSString * const URL_GET_CITY_WEATHER_INFO = @"citylist/id/1/";
             self.provinces = [tmp copy];
             [self.cityTableView reloadData];
         }
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull json) {
-        
+    }
+           failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [self showNetworkFailAlert];
     }];
 }
 
@@ -79,7 +81,11 @@ static NSString * const URL_GET_CITY_WEATHER_INFO = @"citylist/id/1/";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    if (self.citySelectHandler) {
+        ProvinceInfo *province = self.provinces[indexPath.section];
+        self.citySelectHandler(province.citys[indexPath.row]);
+    }
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)cancelButtonTouched:(UIButton *)sender {

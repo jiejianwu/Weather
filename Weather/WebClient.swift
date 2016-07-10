@@ -9,12 +9,15 @@
 
 class WebClient: AFHTTPSessionManager {
 
-    static let baseUrl = "http://http://api.yytianqi.com/"
+    static let baseUrl = "http://api.yytianqi.com/"
     static private var _shareInstance: WebClient?
     
     class func shareInstance() -> WebClient {
         if _shareInstance == nil {
             _shareInstance = WebClient(baseURL: NSURL(string: baseUrl))
+            _shareInstance?.responseSerializer = AFJSONResponseSerializer()
+            _shareInstance?.responseSerializer.acceptableContentTypes = NSSet(objects: ["text/html"]) as? Set<String>
+
         }
         return _shareInstance!
     }
