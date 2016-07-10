@@ -44,6 +44,9 @@ static NSString * const URL_GET_CITY_WEATHER_INFO = @"citylist/id/1/";
                 ProvinceInfo *province = [[ProvinceInfo alloc] initWithDic:dic];
                 [tmp addObject:province];
             }
+            [tmp sortUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+                return [[self firstCharactorWithString:((ProvinceInfo *)obj1).name] compare:[self firstCharactorWithString:((ProvinceInfo *)obj2).name]];
+            }];
             self.provinces = [tmp copy];
             [self.cityTableView reloadData];
         }
@@ -90,6 +93,14 @@ static NSString * const URL_GET_CITY_WEATHER_INFO = @"citylist/id/1/";
 
 - (IBAction)cancelButtonTouched:(UIButton *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (NSString *)firstCharactorWithString:(NSString *)string {
+    NSMutableString *str = [NSMutableString stringWithString:string];
+    CFStringTransform((CFMutableStringRef) str, NULL, kCFStringTransformMandarinLatin, NO);
+    CFStringTransform((CFMutableStringRef)str, NULL, kCFStringTransformStripDiacritics, NO);
+    NSString *pinYin = [str capitalizedString];
+    return [pinYin substringToIndex:1];
 }
 
 @end

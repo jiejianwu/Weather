@@ -20,6 +20,7 @@
 		E94984D71D3202FC00005E86 /* WeatherView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E94984D61D3202FC00005E86 /* WeatherView.xib */; };
 		E94984DA1D322B7100005E86 /* CityWeatherInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E94984D91D322B7100005E86 /* CityWeatherInfo.m */; };
 		E94984DC1D32436200005E86 /* WeatherCode.plist in Resources */ = {isa = PBXBuildFile; fileRef = E94984DB1D32436200005E86 /* WeatherCode.plist */; };
+		E94984DE1D32A0FF00005E86 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E94984DD1D32A0FF00005E86 /* CoreLocation.framework */; };
 		E9EFD0271D2F7B66006047E2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD0261D2F7B66006047E2 /* main.m */; };
 		E9EFD02A1D2F7B66006047E2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD0291D2F7B66006047E2 /* AppDelegate.m */; };
 		E9EFD02D1D2F7B66006047E2 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD02C1D2F7B66006047E2 /* MainViewController.m */; };
@@ -53,6 +54,7 @@
 		E94984D81D322B7100005E86 /* CityWeatherInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityWeatherInfo.h; sourceTree = "<group>"; };
 		E94984D91D322B7100005E86 /* CityWeatherInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityWeatherInfo.m; sourceTree = "<group>"; };
 		E94984DB1D32436200005E86 /* WeatherCode.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WeatherCode.plist; sourceTree = "<group>"; };
+		E94984DD1D32A0FF00005E86 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		E9EFD0221D2F7B66006047E2 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9EFD0261D2F7B66006047E2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E9EFD0281D2F7B66006047E2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E94984DE1D32A0FF00005E86 /* CoreLocation.framework in Frameworks */,
 				110D1C971F6042F24C1AF2EA /* libPods-Weather.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,6 +83,7 @@
 		79186A396868A0453AFAB366 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E94984DD1D32A0FF00005E86 /* CoreLocation.framework */,
 				C29BFECC12BCA71BCBC17693 /* libPods-Weather.a */,
 			);
 			name = Frameworks;
