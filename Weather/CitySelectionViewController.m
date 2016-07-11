@@ -29,9 +29,21 @@ static NSString * const URL_GET_CITY_WEATHER_INFO = @"citylist/id/1/";
     [self getCityList];
 }
 
+#pragma mark - Common
+
 - (void)initUI {
     self.cityTableView.tableFooterView = [UIView new];
 }
+
+- (NSString *)firstCharactorWithString:(NSString *)string {
+    NSMutableString *str = [NSMutableString stringWithString:string];
+    CFStringTransform((CFMutableStringRef) str, NULL, kCFStringTransformMandarinLatin, NO);
+    CFStringTransform((CFMutableStringRef)str, NULL, kCFStringTransformStripDiacritics, NO);
+    NSString *pinYin = [str capitalizedString];
+    return [pinYin substringToIndex:1];
+}
+
+#pragma mark - Http Request
 
 - (void)getCityList {
     [WebClient get:URL_GET_CITY_WEATHER_INFO
@@ -55,6 +67,8 @@ static NSString * const URL_GET_CITY_WEATHER_INFO = @"citylist/id/1/";
         [self showNetworkFailAlert];
     }];
 }
+
+#pragma mark - UITableView Delegate And DataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     if (self.provinces) {
@@ -91,16 +105,10 @@ static NSString * const URL_GET_CITY_WEATHER_INFO = @"citylist/id/1/";
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+#pragma mark - IBAction
+
 - (IBAction)cancelButtonTouched:(UIButton *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (NSString *)firstCharactorWithString:(NSString *)string {
-    NSMutableString *str = [NSMutableString stringWithString:string];
-    CFStringTransform((CFMutableStringRef) str, NULL, kCFStringTransformMandarinLatin, NO);
-    CFStringTransform((CFMutableStringRef)str, NULL, kCFStringTransformStripDiacritics, NO);
-    NSString *pinYin = [str capitalizedString];
-    return [pinYin substringToIndex:1];
 }
 
 @end

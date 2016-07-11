@@ -34,6 +34,8 @@ static NSString * const URL_GET_CITY_WEATHER_INFO = @"forecast7d/";
     [self startStandardUpdates];
 }
 
+#pragma mark - Common
+
 - (void)refreshUI {
     self.labelCity.text = self.cityWeather.cityName;
     self.title = self.cityWeather.cityName;
@@ -51,8 +53,6 @@ static NSString * const URL_GET_CITY_WEATHER_INFO = @"forecast7d/";
     [self.scrollViewDaysWeather setContentOffset:CGPointMake(0, 0)];
     
 }
-
-
 
 - (void)startStandardUpdates {
     
@@ -78,6 +78,19 @@ static NSString * const URL_GET_CITY_WEATHER_INFO = @"forecast7d/";
     [self.locationManager startUpdatingLocation];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:SEGUE_MODAL_FROM_MAIN_TO_CITY_LIST]) {
+        UINavigationController *nvc = (UINavigationController *)segue.destinationViewController;
+        CitySelectionViewController *vc = nvc.viewControllers.firstObject;
+        vc.citySelectHandler = ^(CityInfo *city){
+            self.title = city.name;
+            [self getWeatherInfoByCityId:city.code];
+        };
+    }
+}
+
+#pragma mark - Http Request
+
 - (void)getWeatherInfoByCityId:(NSString *)cityId {
     NSDictionary *params = @{@"city": cityId, @"key": [GlobalDataManager shareInstance].yyWeatherKey};
     [WebClient get:URL_GET_CITY_WEATHER_INFO
@@ -99,20 +112,13 @@ static NSString * const URL_GET_CITY_WEATHER_INFO = @"forecast7d/";
     }];
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:SEGUE_MODAL_FROM_MAIN_TO_CITY_LIST]) {
-        UINavigationController *nvc = (UINavigationController *)segue.destinationViewController;
-        CitySelectionViewController *vc = nvc.viewControllers.firstObject;
-        vc.citySelectHandler = ^(CityInfo *city){
-            self.title = city.name;
-            [self getWeatherInfoByCityId:city.code];
-        };
-    }
-}
+#pragma mark - Http Request
 
 - (IBAction)cityButtonTouched:(UIButton *)sender {
     [self performSegueWithIdentifier:SEGUE_MODAL_FROM_MAIN_TO_CITY_LIST sender:nil];
 }
+
+#pragma mark - CLLocationManagerDelegate
 
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
     if (self.cityWeather) {
